@@ -33,4 +33,14 @@ TS1192: Module '"/home/vagrant/code/Webble/AngularTypeScript/node_modules/@types
 ```
 solution was to add ```"esModuleInterop": false``` to tsconfig. It's a temporary solution that I found here: [https://github.com/Microsoft/TypeScript-React-Starter/issues/8]
 * Got an error like this: **TypeError: Cannot read property 'afterCompile' of undefined** ts-loader was recently updated with webpack 4 support and dropped support for webpack 3 but the version laravel-mix automagically grabs during the first build is the most recent which breaks so downgrade it to 3.5 ```npm install --save-dev ts-loader@3.5``` see [https://github.com/JeffreyWay/laravel-mix/issues/1498]
-* 
+* When trying to use require for templates so webpack can pull it in for us I saw this error in the editor: 
+```
+Unresolved function or method" for require().
+```
+ , and this one while building: 
+ ```
+ ERROR in ./src/components/products/products.component.ts
+ [tsl] ERROR in /home/vagrant/code/Webble/AngularTypeScript/src/components/products/products.componet.ts(5,15)
+ TS2304: Cannot find name 'require'.
+ ```
+ The solution is to install the type definitions for node ```npm install --save-dev @type/node```
