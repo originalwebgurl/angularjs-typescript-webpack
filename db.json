@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "id": 1,
+      "title": "Captain Picard Plushie",
+      "price": 28.99,
+      "description": "Soft and squishy Star Trek captain"
+    },
+    {
+      "id": 2,
+      "title": "Enterprise Pizza Cutter",
+      "price": 42.99,
+      "description": "Boldly go where no pizza cutter has gone before?"},
+    {
+      "id": 3,
+      "title": "Stark Trek Pajamas",
+      "price": 65.99,
+      "description": "Now if you get caught LARPing you can point out that 'Ummm, actually these are my pajamas.'"}
+  ]
+}
