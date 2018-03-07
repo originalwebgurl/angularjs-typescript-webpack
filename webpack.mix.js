@@ -14,10 +14,16 @@ const srcDir = 'src';
 const styleSrcDir = `${srcDir}/assets/style`;
 const distDir = 'public';
 
+// products app
 mix.ts(`${srcDir}/app.ts`, `${distDir}/`)
     .sass(`${styleSrcDir}/app.scss`, `${distDir}/css/`)
     .copy(`index.html`, `${distDir}/`)
     .setPublicPath(`${distDir}`);
+
+// course-viewer app
+mix.ts(`${srcDir}/course-viewer/app.module.ts`, `${distDir}/course-app.js`)
+    // .sass(`${styleSrcDir}/course-app.scss`, `${distDir}/css/`)
+    .copy(`courses.html`, `${distDir}/`);
 
 
 
