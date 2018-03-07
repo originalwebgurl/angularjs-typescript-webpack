@@ -1,4 +1,18 @@
-import {IProduct} from "./products";
+export interface IProduct {
+    id: number,
+    title: string,
+    price: number,
+    description: string,
+    // calculateDiscount(percent: number): number;
+}
+
+export interface IProductService {
+    getProductResource(): angular.resource.IResourceClass<IProductResource>;
+}
+
+export interface IProductResource
+    extends angular.resource.IResource<IProduct> {
+}
 
 export class Product implements IProduct {
 

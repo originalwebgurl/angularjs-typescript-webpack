@@ -13,6 +13,7 @@ npm run dev
 * [AngularJS 1.x Style Guide - John Papa](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md)
 [Upgrading from AngularJS](https://angular.io/guide/upgrade)
 * [TSLint](https://palantir.github.io/tslint/usage/cli/)
+* [https://codepen.io/martinmcwhorter/post/angularjs-1-x-with-typescript-or-es6-best-practices]
 
 ## Workflow
 

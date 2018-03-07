@@ -1,8 +1,11 @@
-export class ProductsService {
-    static $inject: string[] = ["$http"];
+import {IProductResource, IProductService} from "./products.model";
 
-    constructor(private $http: angular.IHttpService) {}
-    getProducts(){
-        return this.$http.get("http://angular.site:3000/products");
+export class ProductsService implements IProductService {
+
+    static $inject: string[] = ["$resource"];
+    constructor(private $resource: angular.resource.IResourceService) {}
+
+    getProductResource(): angular.resource.IResourceClass<IProductResource> {
+        return this.$resource("http://angular.site:3000/products/:id");
     }
 }
